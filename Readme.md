@@ -1,4 +1,4 @@
-# Features (No need for extra features, just make the listed features)
+# Features 
 # Home Page
 - Search any meal from the API and it displays the search results on the frontend (as I type the search results gets updated, just like Google does for suggestions).
 - Each search result of the meal will have a favourite button, clicking on which the meal should be added to “My favourite meals” (a list).
