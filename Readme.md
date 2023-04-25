@@ -10,3 +10,5 @@
 # My favourite movies Page
 - Displays a list of all the favourite movies.
 - Remove from favourites button: Each movie have remove from favourites button, clicking on which it removes that movie from the list.
+# Api Used 
+- https://www.omdbapi.com/
