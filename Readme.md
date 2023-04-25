@@ -1,4 +1,4 @@
-# Features (No need for extra features, just make the listed features)
+# Features
 Home Page
 - Search any movie from the API and display the search results on the frontend (as I type the search results should update, just like Google does for suggestions).
 - Each search result of the movie has a favourite button, clicking on which the movie gets be added to “My favourite movies” (a list).
