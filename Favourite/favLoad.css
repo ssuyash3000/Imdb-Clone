@@ -15,6 +15,9 @@ body {
   background-attachment: fixed;
   color: antiquewhite;
   text-align: center;
+  width: 97%;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 #appName{
@@ -36,6 +39,7 @@ ul {
     width: auto;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     /* border: 1px solid #e5e5e5; */
   }
   li{
