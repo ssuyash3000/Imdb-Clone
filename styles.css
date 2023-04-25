@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background: radial-gradient(
+        circle closest-corner at center 500px,
+        #2f3e6f,
+        rgb(255, 255, 255) 50%
+      )
+      no-repeat;
+    /* height: 100vh;
+    width: 100vw; */
+    background-size: cover;
+    background-attachment: fixed;
+    color: antiquewhite;
+    text-align: center;
+  }
+
+  #appName{
+    /* background-color: #dad7a1; */
+    background-image: linear-gradient(45deg, #b7b740, #d5406b);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+  }
+  .search {
+    width: 50%;
+   
+    height: 60px;
+    outline: none;
+    font-size: 15px;
+    padding: 11px;
+    border: 1px solid #f3f3f3;
+    margin-bottom: 3px;
+    border-radius: 40px;
+    min-width: 550px;
+  }
+  #btnContainer{
+    display: inline;
+    text-align: left;
+    margin-left: 15px;
+    /* margin-left: 30%;
+    margin-right: 30%; */
+    align-items: center;
+    
+  }
+  .btn {
+    background-color: rgb(42, 76, 150);
+    color: rgb(238, 229, 229);
+    padding: 16px;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 0px;
+    min-width: 120px;
+    border: none;
+    border-radius: 40%;
+  }
+  #search:hover {
+    background-color: rgb(96, 149, 110);
+    text-decoration: underline;
+    transition-delay: 1s, 300ms;
+    transition-property: text-decoration, background-color;
+    cursor: pointer; 
+  }
+  #clear:hover {
+    background-color: rgb(198, 83, 83);
+    text-decoration: underline;
+    transition-delay: 1s, 300ms;
+    transition-property: text-decoration, background-color;
+    cursor: pointer; 
+  }
+  #favourite:hover{
+    background-color: rgb(4, 76, 21);
+    text-decoration: underline;
+    transition-delay: 1s, 300ms;
+    transition-property: text-decoration, background-color;
+    cursor: pointer; 
+  }
+  
+  #favBtn{
+    background-color: rgb(0, 0, 0);
+    color: rgb(238, 229, 229);
+    padding: 16px;
+    /* font-size: 20px; */
+    margin: 5px;
+    margin-bottom: 10px;
+    /* min-width: 120px; */
+    border: none;
+    border-radius: 40%;
+    /* min-width: 550px */
+  }
+  #favBtn:hover {
+    color: rgb(10, 126, 10);
+ 
+    text-decoration: underline;
+    transition-delay: 1s, 300ms;
+    transition-property: text-decoration, background-color;
+    cursor: pointer; 
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 91px;
+    height: auto;
+    width: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* border: 1px solid #e5e5e5; */
+  }
+  li{
+    justify-content: space-between;
+    overflow: hidden;
+    max-width: 300px;
+    max-height: 650px;
+    min-width: 300px;
+    color: #f3f3f3;
+    display: flex;
+    background-color: black ;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: no-wrap;
+    border-radius: 40px;
+  }
+  li img{
+    width: 200px;
+ 
+    height: 350px;
+    margin: 0;
+    padding: 0;
+  }
+
+  li #titleContainer {
+    color: #f3f3f3;
+    /* max-width: 10px;
+    min-width: 40px; */
+    text-align: center;
+  }
+  li #movieTitle:hover{
+    cursor: pointer;
+  }
+  li #type{
+    /* margin-top: 20%; */
+    min-width: 140px;
+
+    
+  }
+  #errorMessage {
+    font-size: xx-large;
+	color: rgb(0, 0, 0);
+	text-align: center;
+    /* margin-left: 40%; */
+	position: auto;
+}
