@@ -25,6 +25,8 @@ async function addMoviesToDOM(movie){
     <h3 id="type">Type - ${showType}</h3>
     <span id="movieYear">${movie.Year}</span>
     </div>
+    <button id="deleteBtn" 
+        data-id="${movie.imdbID}" >Delete</button>
     `
     listOfMoviesInDom.append(li);
 }
@@ -33,6 +35,13 @@ function renderList(){
     for(let i = 0; i < favList.length; i++){
         addMoviesToDOM(favList[i]);
     }
+}
+function deleteFun(id){
+    const newTasks = favList.filter(function (movie) {
+        return movie.id !== id;
+      });
+    favList = newTasks;
+
 }
 function handleClick(e){
     const target = e.target;
@@ -43,6 +52,9 @@ function handleClick(e){
         // window.location = "./movieInfo/movie.html";
         window.open("./../movieInfo/movie.html", "_blank");
 
+    }else if(target.id === "deleteBtn"){
+        deleteFun(target.dataset.id);
+        renderList();
     }
 }
 document.addEventListener("click", handleClick);

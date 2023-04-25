@@ -73,3 +73,23 @@ ul {
   li #movieTitle:hover{
     cursor: pointer;
   }
+  #deleteBtn{
+    background-color: rgb(0, 0, 0);
+    color: rgb(238, 229, 229);
+    padding: 16px;
+    /* font-size: 20px; */
+    margin: 5px;
+    margin-bottom: 10px;
+    /* min-width: 120px; */
+    border: none;
+    border-radius: 40%;
+    /* min-width: 550px */
+  }
+  #deleteBtn:hover {
+    color: rgb(203, 14, 10);
+ 
+    text-decoration: underline;
+    transition-delay: 1s, 300ms;
+    transition-property: text-decoration, background-color;
+    cursor: pointer; 
+  }
