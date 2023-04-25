@@ -26,7 +26,7 @@ async function addMoviesToDOM(movie){
     <span id="movieYear">${movie.Year}</span>
     </div>
     <button id="deleteBtn" 
-        data-id="${movie.imdbID}" >Delete</button>
+        data-id="${movie.imdbID}" >Delete from Favourites</button>
     `
     li.setAttribute("id", `${movie.imdbID}`);
     console.log(li);
@@ -56,9 +56,8 @@ function handleClick(e){
         //console.log( JSON.stringify(movieId));
         localStorage.setItem("movieId", JSON.stringify(movieId));
         // window.location = "./movieInfo/movie.html";
-        console.log(target.tagName);
+        // console.log(target.tagName);
         window.open("./../movieInfo/movie.html", "_blank");
-        
 
     }else if(target.id === "deleteBtn"){
         
