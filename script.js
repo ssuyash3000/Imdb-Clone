@@ -52,6 +52,9 @@ var app = (function(){
             }
         }
         favList.push(movieObj);
+        //updating the favList array in the localStorage each time 
+        // favList is updated 
+        localStorage.setItem("favList", JSON.stringify(favList));
     }
     function renderList(){
         for(let i = 0; i < movieList.length; i++){

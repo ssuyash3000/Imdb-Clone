@@ -15,7 +15,7 @@ function parseType(type){
 async function addMoviesToDOM(movie){
     let li = document.createElement("li");
     const response = await fetch(`https://omdbapi.com/?apikey=f5d4d0a6&i=${movie.id}`);
-    movie = await response.json();
+    movie = await response.json(); //Note - The parameter variable is getting updated here 
     let showType = parseType(movie.Type);
     li.innerHTML = 
     `
@@ -28,6 +28,8 @@ async function addMoviesToDOM(movie){
     <button id="deleteBtn" 
         data-id="${movie.imdbID}" >Delete</button>
     `
+    li.setAttribute("id", `${movie.imdbID}`);
+    console.log(li);
     listOfMoviesInDom.append(li);
 }
 function renderList(){
@@ -41,6 +43,10 @@ function deleteFun(id){
         return movie.id !== id;
       });
     favList = newTasks;
+    let ele = document.getElementById(id);
+    ele.style.display ="none";
+    //updating the favList array present in the localStorage
+    localStorage.setItem("favList", JSON.stringify(favList));
 
 }
 function handleClick(e){
@@ -50,11 +56,14 @@ function handleClick(e){
         //console.log( JSON.stringify(movieId));
         localStorage.setItem("movieId", JSON.stringify(movieId));
         // window.location = "./movieInfo/movie.html";
+        console.log(target.tagName);
         window.open("./../movieInfo/movie.html", "_blank");
+        
 
     }else if(target.id === "deleteBtn"){
+        
         deleteFun(target.dataset.id);
-        renderList();
+       // renderList();
     }
 }
 document.addEventListener("click", handleClick);
