@@ -10,3 +10,5 @@
 # My favourite meals Page
 - Displays a list of all the favourite meals.
 - Remove from favourites button: Each meal should have remove from favourites button, clicking on which should remove that meal from the list.
+# API used 
+- https://www.omdbapi.com/
